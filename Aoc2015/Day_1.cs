@@ -1,13 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using Microsoft.Win32.SafeHandles;
 using NUnit.Framework;
 
-namespace AdventOfCode
+namespace AdventOfCode.Aoc2015
 {
-    public class Aoc2015_Day_1
+    public class Day_1
     {
         [SetUp]
         public void Setup()
