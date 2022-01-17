@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AdventOfCode {
+namespace AdventOfCode.Aoc2015 {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace AdventOfCode {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Data {
+    internal class Aoc2015Data {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Data() {
+        internal Aoc2015Data() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AdventOfCode {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AdventOfCode.Data", typeof(Data).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AdventOfCode.Aoc2015.Aoc2015Data", typeof(Aoc2015Data).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

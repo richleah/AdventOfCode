@@ -15,22 +15,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Data.Designer.cs">
+    <Compile Update="Aoc2015\Aoc2015Data.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Data.resx</DependentUpon>
+      <DependentUpon>Aoc2015Data.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Aoc2021\Aoc2021Data.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Aoc2021Data.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Data.resx">
+    <EmbeddedResource Update="Aoc2015\Aoc2015Data.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Data.Designer.cs</LastGenOutput>
+      <LastGenOutput>Aoc2015Data.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Aoc2021\" />
+    <EmbeddedResource Update="Aoc2021\Aoc2021Data.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Aoc2021Data.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
