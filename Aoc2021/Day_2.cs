@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using NUnit.Framework;
+using FluentAssertions;
 
 namespace AdventOfCode.Aoc2021;
 
@@ -21,21 +22,33 @@ public class Day_2
     [Test]
     public void Day_2_Sample()
     {
+        // Arrange
         var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day2Sample);
-        //var finalPosition = GetPosition(directions.Moves);
-        //Assert.AreEqual(15, finalPosition.Horizontal);
-        //Assert.AreEqual(10, finalPosition.Depth);
-        Assert.AreEqual(new Position(15,10), GetPosition(directions.Moves));
+
+        // Act
+        var finalPosition = GetPosition(directions.Moves);
+
+        //Assert
+        Assert.AreEqual(15, finalPosition.Horizontal);
+        Assert.AreEqual(10, finalPosition.Depth);
+        finalPosition.Horizontal.Should().Be(15);
+        finalPosition.Depth.Should().Be(10);
+        Assert.AreEqual(new Position(15, 10), GetPosition(directions.Moves));
+
     }
 
     [Test]
     public void Day_2_Exercise()
     {
+        // Arrange
         var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day2);
+
+        // Act
         var finalPosition = GetPosition(directions.Moves);
+
+        // Assert
         Assert.AreEqual(new Position(2063,1005), finalPosition);
         Assert.AreEqual(2073315, finalPosition.Horizontal * finalPosition.Depth);
-
     }
 
     public static Position GetPosition(List<Move> moves)

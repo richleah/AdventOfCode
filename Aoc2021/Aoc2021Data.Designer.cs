@@ -240,5 +240,64 @@ namespace AdventOfCode.Aoc2021 {
                 return ResourceManager.GetString("Day2Sample", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;data&quot;:[
+        ///&quot;010100010111&quot;,
+        ///&quot;100100100110&quot;,
+        ///&quot;100110111001&quot;,
+        ///&quot;011001011011&quot;,
+        ///&quot;010000110111&quot;,
+        ///&quot;000011101001&quot;,
+        ///&quot;011000011101&quot;,
+        ///&quot;101111011111&quot;,
+        ///&quot;011001011010&quot;,
+        ///&quot;111100001001&quot;,
+        ///&quot;111111000110&quot;,
+        ///&quot;100010100110&quot;,
+        ///&quot;011100100100&quot;,
+        ///&quot;011111010000&quot;,
+        ///&quot;111010001100&quot;,
+        ///&quot;010111001110&quot;,
+        ///&quot;100010100100&quot;,
+        ///&quot;101000010000&quot;,
+        ///&quot;011101110100&quot;,
+        ///&quot;100010011000&quot;,
+        ///&quot;001111110011&quot;,
+        ///&quot;111001100001&quot;,
+        ///&quot;010000011001&quot;,
+        ///&quot;000011101010&quot;,
+        ///&quot;100010101100&quot;,
+        ///&quot;111011100010&quot;,
+        ///&quot;110000100001&quot;,
+        ///&quot;101010110001&quot;,
+        ///&quot;111101110101&quot;,
+        ///&quot;0010100 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day3 {
+            get {
+                return ResourceManager.GetString("Day3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;data&quot;:[&quot;00100&quot;,
+        ///&quot;11110&quot;,
+        ///&quot;10110&quot;,
+        ///&quot;10111&quot;,
+        ///&quot;10101&quot;,
+        ///&quot;01111&quot;,
+        ///&quot;00111&quot;,
+        ///&quot;11100&quot;,
+        ///&quot;10000&quot;,
+        ///&quot;11001&quot;,
+        ///&quot;00010&quot;,
+        ///&quot;01010&quot;]}.
+        /// </summary>
+        internal static string Day3Sample {
+            get {
+                return ResourceManager.GetString("Day3Sample", resourceCulture);
+            }
+        }
     }
 }
