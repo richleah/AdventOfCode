@@ -58,6 +58,8 @@ public class Day_3
         //Assert.AreEqual(new Position(15,10), GetPosition(directions.Moves));
     }
 
+    // Part 1
+
     [Test]
     public void Should_generate_gamma_rate_of_22_for_sample_data()
     {
@@ -89,36 +91,6 @@ public class Day_3
     }
 
     [Test]
-    public void Should_generate_oxygen_generator_rating_of_23_for_sample_data()
-    {
-        // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
-        JsonElement diagnosticData = document.RootElement.GetProperty("data");
-        var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
-
-        // Act
-        var processor = new DiagnosticsProcessor(diagnostics);
-
-        //Assert
-        Assert.AreEqual(23, processor.OxygenGeneratorRating());
-    }
-
-    [Test]
-    public void Should_generate_c02_scrubber_rating_of_10_for_sample_data()
-    {
-        // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
-        JsonElement diagnosticData = document.RootElement.GetProperty("data");
-        var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
-
-        // Act
-        var processor = new DiagnosticsProcessor(diagnostics);
-
-        //Assert
-        Assert.AreEqual(10, processor.C02ScrubberRating());
-    }
-
-    [Test]
     public void Should_generate_power_consumption_of_198_for_sample_data()
     {
         // Arrange
@@ -131,21 +103,6 @@ public class Day_3
 
         //Assert
         Assert.AreEqual(198, processor.PowerConsumption());
-    }
-
-    [Test]
-    public void Should_generate_life_support_rating_of_230_for_sample_data()
-    {
-        // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
-        JsonElement diagnosticData = document.RootElement.GetProperty("data");
-        var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
-
-        // Act
-        var processor = new DiagnosticsProcessor(diagnostics);
-
-        //Assert
-        Assert.AreEqual(230, processor.LifeSupportRating());
     }
 
     [Test]
@@ -193,6 +150,53 @@ public class Day_3
         Assert.AreEqual(4139586, processor.PowerConsumption());
     }
 
+    // Part 2
+
+    [Test]
+    public void Should_generate_oxygen_generator_rating_of_23_for_sample_data()
+    {
+        // Arrange
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        JsonElement diagnosticData = document.RootElement.GetProperty("data");
+        var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
+
+        // Act
+        var processor = new DiagnosticsProcessor(diagnostics);
+
+        //Assert
+        Assert.AreEqual(23, processor.OxygenGeneratorRating());
+    }
+
+    [Test]
+    public void Should_generate_c02_scrubber_rating_of_10_for_sample_data()
+    {
+        // Arrange
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        JsonElement diagnosticData = document.RootElement.GetProperty("data");
+        var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
+
+        // Act
+        var processor = new DiagnosticsProcessor(diagnostics);
+
+        //Assert
+        Assert.AreEqual(10, processor.C02ScrubberRating());
+    }
+
+    [Test]
+    public void Should_generate_life_support_rating_of_230_for_sample_data()
+    {
+        // Arrange
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        JsonElement diagnosticData = document.RootElement.GetProperty("data");
+        var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
+
+        // Act
+        var processor = new DiagnosticsProcessor(diagnostics);
+
+        //Assert
+        Assert.AreEqual(230, processor.LifeSupportRating());
+    }
+
     [Test]
     public void Should_generate_oxygen_generator_rating_of_2539_for_actual_data()
     {
@@ -207,6 +211,7 @@ public class Day_3
         //Assert
         Assert.AreEqual(2539, processor.OxygenGeneratorRating());
     }
+
     [Test]
     public void Should_generate_c02_scrubber_rating_of_709_for_actual_data()
     {
@@ -295,7 +300,6 @@ public class Day_3
                 var bitWithLowestCount = oxygenGeneratorBits.Count(x => x == '1') >= oxygenGeneratorBits.Count(x => x == '0') ? '0' : '1';
                 diagnosticData.RemoveAll(x => x[i] == bitWithLowestCount);
 
-                //TestContext.WriteLine($"BitWithHighestCount: {bitWithHighestCount}");
                 TestContext.WriteLine($"BitWithLowestCount: {bitWithLowestCount}");
                 TestContext.WriteLine($"DiagnosticData: {string.Join(",", diagnosticData)}");
 
