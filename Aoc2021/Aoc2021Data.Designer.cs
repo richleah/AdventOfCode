@@ -353,5 +353,43 @@ namespace AdventOfCode.Aoc2021 {
                 return ResourceManager.GetString("Day6Sample", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 16,1,2,0,4,2,7,1,2,14.
+        /// </summary>
+        internal static string Day7Sample {
+            get {
+                return ResourceManager.GetString("Day7Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to fdeba beagfd gbafe dagb dbf ecfad bd dgcaefb fbecgd abfecg | dgba dfb ecadf bdf
+        ///dgfc egdbaf afgcbe eafdbcg bcgad bdg fdbacg gd ecabd bafgc | gd gbd dg febgac
+        ///dfebc bceadf ebacf gdceb fd dfea cdgfba afbgec dfb fdaecbg | cgafbde efbagc faed gecdb
+        ///dbaef fabgd fcaedb cgadf aefbgd cabefg gfb bceagdf bg ebdg | gdbfae geafdbc bafgdce dbgfa
+        ///aebgd adg dg dgcabef facedg cfaebd dfbega begca bfgd dbafe | abdecf eafbd fdgb ebdfgca
+        ///bae febac abcgf eabfgd cbagfd gefcba abedfcg efcda eb becg | fcgab gafbed aedcfbg eb        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day8 {
+            get {
+                return ResourceManager.GetString("Day8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe
+        ///edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec | fcgedb cgb dgebacf gc
+        ///fgaebd cg bdaec gdafb agbcfd gdcbef bgcad gfac gcb cdgabef | cg cg fdcagb cbg
+        ///fbegcd cbd adcefb dageb afcb bc aefdc ecdab fgdeca fcdbega | efabcd cedba gadfec cb
+        ///aecbfdg fbg gf bafeg dbefa fcge gcbea fcaegb dgceab fcbdga | gecf egdcabf bgf bfgea
+        ///fgeab ca afcebg bdacfeg cfaedg gcfdb baec bfadeg bafgc acf | gebdcfa ecba ca fadegcb
+        ///dbcfg [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day8Sample {
+            get {
+                return ResourceManager.GetString("Day8Sample", resourceCulture);
+            }
+        }
     }
 }

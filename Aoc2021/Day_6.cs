@@ -11,14 +11,10 @@ namespace AdventOfCode.Aoc2021;
 [TestFixture]
 public class Day_6
 {
-    //private List<int>? _lanternFishDaysTilSpawnSampleData;
-    //private List<int>? _lanternFishDaysTilSpawnRealData;
 
     [SetUp]
     public void Setup()
     {
-        //_lanternFishDaysTilSpawnSampleData = Aoc2021Data.Day6Sample.Split(",").Select(x => Convert.ToInt32(x)).ToList();
-        //_lanternFishDaysTilSpawnRealData = Aoc2021Data.Day6.Split(",").Select(x => Convert.ToInt32(x)).ToList();
     }
 
     [Test]
