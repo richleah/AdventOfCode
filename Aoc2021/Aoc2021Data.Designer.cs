@@ -391,5 +391,32 @@ namespace AdventOfCode.Aoc2021 {
                 return ResourceManager.GetString("Day8Sample", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0197653456789987679545987978921245689901497654212455689767899878999979653246892123569876467899212346
+        ///9989542349899986578959976557890134599892398943201234678956789467989867932135789012398764345678923456
+        ///8679931298999765459898765445921247987689459865432345889345892399876546899013894123459976569799634577
+        ///6567895497998764345789543239895456797535967976545467891234989989865434598954993248969987678999545798
+        ///8456897986539975234568955398789967998212899597676578910395678979996423987895789356798698799997656789
+        ///73 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day9 {
+            get {
+                return ResourceManager.GetString("Day9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2199943210
+        ///3987894921
+        ///9856789892
+        ///8767896789
+        ///9899965678.
+        /// </summary>
+        internal static string Day9Sample {
+            get {
+                return ResourceManager.GetString("Day9Sample", resourceCulture);
+            }
+        }
     }
 }
