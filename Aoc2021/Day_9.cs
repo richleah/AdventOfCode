@@ -37,7 +37,7 @@ public class Day_9
         CaveSpot[,] caveGrid = CaveGridLoader.Load(inputData);
 
         // Act
-        var finder = new LowSpotFinder(caveGrid);
+        var finder = new CaveExplorer(caveGrid);
         double riskLevel = finder.CalculateRiskLevel();
 
         //Assert
@@ -52,7 +52,7 @@ public class Day_9
         CaveSpot[,] caveGrid = CaveGridLoader.Load(inputData);
 
         // Act
-        var finder = new LowSpotFinder(caveGrid);
+        var finder = new CaveExplorer(caveGrid);
         double riskLevel = finder.CalculateRiskLevel();
 
         //Assert
@@ -67,7 +67,7 @@ public class Day_9
         CaveSpot[,] caveGrid = CaveGridLoader.Load(inputData);
 
         // Act
-        var finder = new LowSpotFinder(caveGrid);
+        var finder = new CaveExplorer(caveGrid);
         double basinsMultiplied = finder.CalculateThreeLargestBasinsMultiplied();
 
         //Assert
@@ -82,20 +82,20 @@ public class Day_9
         CaveSpot[,] caveGrid = CaveGridLoader.Load(inputData);
 
         // Act
-        var finder = new LowSpotFinder(caveGrid);
+        var finder = new CaveExplorer(caveGrid);
         double basinsMultiplied = finder.CalculateThreeLargestBasinsMultiplied();
 
         //Assert
         Assert.AreEqual(827904, basinsMultiplied);
     }
     
-    public class LowSpotFinder
+    public class CaveExplorer
     {
         private readonly CaveSpot[,] _caveSpotGrid;
-        private int _xLength => _caveSpotGrid.GetLength(0);
-        private int _yLength => _caveSpotGrid.GetLength(1);
+        private int _rowLength => _caveSpotGrid.GetLength(0);
+        private int _columnLength => _caveSpotGrid.GetLength(1);
 
-        public LowSpotFinder(CaveSpot[,] caveSpotGrid)
+        public CaveExplorer(CaveSpot[,] caveSpotGrid)
         {
             _caveSpotGrid = caveSpotGrid;
         }
@@ -116,15 +116,15 @@ public class Day_9
         {
             List<CaveSpot> lowCaveSpots = new();
 
-            for (var y = 0; y < _yLength; y++)
+            for (var y = 0; y < _columnLength; y++)
             {
-                for (int x = 0; x < _xLength; x++)
+                for (int x = 0; x < _rowLength; x++)
                 {
                     // check if low spot
                     var top = y <= 0 ? 10 : _caveSpotGrid[x, y - 1].Height;
                     var left = x <= 0 ? 10 : _caveSpotGrid[x - 1, y].Height;
-                    var right = x == _xLength - 1 ? 10 : _caveSpotGrid[x + 1, y].Height;
-                    var bottom = y == _yLength - 1 ? 10 : _caveSpotGrid[x, y + 1].Height;
+                    var right = x == _rowLength - 1 ? 10 : _caveSpotGrid[x + 1, y].Height;
+                    var bottom = y == _columnLength - 1 ? 10 : _caveSpotGrid[x, y + 1].Height;
                     var theSpot = _caveSpotGrid[x, y].Height;
 
                     if (theSpot < top && theSpot < left && theSpot < right && theSpot < bottom)
@@ -138,32 +138,6 @@ public class Day_9
             return lowCaveSpots;
         }
 
-        //private List<int> FindLowSpotsOld()
-        //{
-        //    List<int> lowSpots = new();
-
-        //    for (var y = 0; y < _yLength; y++)
-        //    {
-        //        for (int x = 0; x < _xLength; x++)
-        //        {
-        //            // check if low spot
-        //            var top = y <= 0 ? 10 : _caveGrid[x, y - 1];
-        //            var left = x <= 0 ? 10 : _caveGrid[x - 1, y];
-        //            var right = x == _xLength - 1 ? 10 : _caveGrid[x + 1, y];
-        //            var bottom = y == _yLength - 1 ? 10 : _caveGrid[x, y + 1];
-        //            var theSpot = _caveGrid[x, y];
-
-        //            if (theSpot < top && theSpot < left && theSpot < right && theSpot < bottom)
-        //            {
-        //                TestContext.WriteLine($"Low Spot found at grid location ({x},{y}) with value: {theSpot}");
-        //                lowSpots.Add(_caveGrid[x, y]);
-        //            }
-        //        }
-        //    }
-
-        //    return lowSpots;
-        //}
-
         public double CalculateThreeLargestBasinsMultiplied()
         {
             double topThreeBasinsMultiplied = 1;
@@ -174,7 +148,7 @@ public class Day_9
 
             foreach (CaveSpot lowCaveSpot in lowSpots)
             {
-                lowSpotBasinSize.Add(lowCaveSpot, CalculateBasinSize(lowCaveSpot.X, lowCaveSpot.Y));
+                lowSpotBasinSize.Add(lowCaveSpot, CalculateBasinSize(lowCaveSpot.Row, lowCaveSpot.Column));
             }
 
             var topThree = lowSpotBasinSize.OrderByDescending(x => x.Value).Take(3);
@@ -188,10 +162,10 @@ public class Day_9
         }
 
         // right, bottom, left, top, return
-        private int CalculateBasinSize(int x, int y)
+        private int CalculateBasinSize(int row, int column)
         {
             int basinSize = 0;
-            var caveSpot = _caveSpotGrid[x, y];
+            var caveSpot = _caveSpotGrid[row, column];
 
             if (caveSpot.HasBeenChecked || caveSpot.Height == 9)
             {
@@ -202,83 +176,46 @@ public class Day_9
             basinSize += 1;
 
             // check right
-            if (y < _yLength - 1)
+            if (column < _columnLength - 1)
             {
-                basinSize += CalculateBasinSize(caveSpot.X, caveSpot.Y + 1);
+                basinSize += CalculateBasinSize(caveSpot.Row, caveSpot.Column + 1);
             }
 
             // check bottom
-            if (x < _xLength - 1)
+            if (row < _rowLength - 1)
             {
-                basinSize += CalculateBasinSize(caveSpot.X + 1, caveSpot.Y);
-
+                basinSize += CalculateBasinSize(caveSpot.Row + 1, caveSpot.Column);
             }
 
             // check left
-            if (y > 0)
+            if (column > 0)
             {
-                basinSize += CalculateBasinSize(caveSpot.X, caveSpot.Y - 1);
+                basinSize += CalculateBasinSize(caveSpot.Row, caveSpot.Column - 1);
             }
 
             // check top
-            if (x > 0)
+            if (row > 0)
             {
-                basinSize += CalculateBasinSize(caveSpot.X - 1, caveSpot.Y);
+                basinSize += CalculateBasinSize(caveSpot.Row - 1, caveSpot.Column);
             }
 
             return basinSize;
         }
-        
-        //private int CalculateBasinSize1(CaveSpot caveSpot)
-        //{
-        //    int basinSize = 0;
-        //    if (caveSpot.HasBeenChecked)
-        //    {
-        //        return basinSize;
-        //    }
-
-        //    basinSize += CalculateBasinSize(_caveSpotGrid[caveSpot.X, caveSpot.Y]);
-
-        //    return basinSize;
-        //}
     }
 
     public class CaveSpot
     {
-        public int X { get; set; }
+        public int Row { get; set; }
 
-        public int Y { get; set; }
+        public int Column { get; set; }
 
         public int Height { get; set; }
-
-        public bool IsInBasin { get; set; }
 
         public bool HasBeenChecked { get; set; }
     }
 
     public class CaveGridLoader
     {
-        public static int[,] LoadOld(string? data)
-        {
-            string[] inputData = data.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
-            var xLength = inputData[0].Length;
-            var yLength = inputData.Length;
-            var caveGrid = new int[xLength, yLength];
-
-            for (var y = 0; y < yLength; y++)
-            {
-                for (int x = 0; x < xLength; x++)
-                {
-                    caveGrid[x, y] = Convert.ToInt32(inputData[y][x].ToString());
-                    TestContext.Write(caveGrid[x, y].ToString().PadRight(2));
-                }
-
-                TestContext.WriteLine();
-            }
-
-            return caveGrid;
-        }
-
         public static CaveSpot[,] Load(string? data)
         {
             string[] inputData = data.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
@@ -293,12 +230,11 @@ public class Day_9
                     caveSpotGrid[x, y] = new CaveSpot
                     {
                         Height = Convert.ToInt32(inputData[y][x].ToString()),
-                        X = x,
-                        Y = y
+                        Row = x,
+                        Column = y
                     };
                     TestContext.Write(caveSpotGrid[x, y].Height.ToString().PadRight(2));
                 }
-
                 TestContext.WriteLine();
             }
 
