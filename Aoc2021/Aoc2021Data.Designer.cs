@@ -154,6 +154,73 @@ namespace AdventOfCode.Aoc2021 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {[[&lt;{(&lt;{[{{[{[[]{}]{&lt;&gt;{}}}({&lt;&gt;()}{{}{}})]}{({[&lt;&gt;{}]({}[])})[{[{}[]](()&lt;&gt;)}&lt;[{}{}]{()&lt;&gt;}&gt;]}}]&lt;(({{{(){}}{[][]
+        ///&lt;&lt;&lt;({((&lt;{&lt;([([&lt;&gt;{}]&lt;{}&lt;&gt;&gt;]{&lt;{}&lt;&gt;&gt;({}&lt;&gt;)}])&gt;}{({(([()[]]{[]()})({{}&lt;&gt;}&lt;(){}&gt;))[(&lt;&lt;&gt;&lt;&gt;&gt;[()[]]){{()[]}&lt;
+        ///&lt;&lt;&lt;[(({{(([[[[&lt;&gt;&lt;&gt;][&lt;&gt;&lt;&gt;]]]([[{}{}](&lt;&gt;&lt;&gt;)][(&lt;&gt;[]){[]()}])])([[(&lt;{}&lt;&gt;&gt;(()[]))(&lt;[][]&gt;)]]{{&lt;[[]{}]{&lt;
+        ///({({([{{[[[{(&lt;(){}&gt;&lt;[]{}&gt;)}]]][(&lt;&lt;([()[]](()[]))&gt;[[[{}[]]{[]&lt;&gt;}](&lt;()&gt;[()&lt;&gt;]]]&gt;(&lt;(({}&lt;&gt;){&lt;&gt;[]}){&lt;[]()&gt;}&gt;{[{(
+        ///[([{(&lt;[&lt;&lt;[({&lt;[()&lt;&gt;][{}]&gt;({{}{}})}({[&lt;&gt;{}][()()]}[([][]){()[]}]))]&gt;&gt;]&gt;)&lt;&lt;[((([[{{()()}(&lt;&gt;{})} [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day10 {
+            get {
+                return ResourceManager.GetString("Day10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [({(&lt;(())[]&gt;[[{[]{&lt;()&lt;&gt;&gt;
+        ///[(()[&lt;&gt;])]({[&lt;{&lt;&lt;[]&gt;&gt;(
+        ///{([(&lt;{}[&lt;&gt;[]}&gt;{[]{[(&lt;()&gt;
+        ///(((({&lt;&gt;}&lt;{&lt;{&lt;&gt;}{[]{[]{}
+        ///[[&lt;[([]))&lt;([[{}[[()]]]
+        ///[{[{({}]{}}([{[{{{}}([]
+        ///{&lt;[[]]&gt;}&lt;{[{[{[]{()[[[]
+        ///[&lt;(&lt;(&lt;(&lt;{}))&gt;&lt;([]([]()
+        ///&lt;{([([[(&lt;&gt;()){}]&gt;(&lt;&lt;{{
+        ///&lt;{([{{}}[&lt;[[[&lt;&gt;{}]]]&gt;[]].
+        /// </summary>
+        internal static string Day10Sample {
+            get {
+                return ResourceManager.GetString("Day10Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4134384626
+        ///7114585257
+        ///1582536488
+        ///4865715538
+        ///5733423513
+        ///8532144181
+        ///1288614583
+        ///2248711141
+        ///6415871681
+        ///7881531438.
+        /// </summary>
+        internal static string Day11 {
+            get {
+                return ResourceManager.GetString("Day11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5483143223
+        ///2745854711
+        ///5264556173
+        ///6141336146
+        ///6357385478
+        ///4167524645
+        ///2176841721
+        ///6882881134
+        ///4846848554
+        ///5283751526.
+        /// </summary>
+        internal static string Day11Sample {
+            get {
+                return ResourceManager.GetString("Day11Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;depths&quot;:[199,
         ///200,
         ///208,
