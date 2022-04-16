@@ -92,10 +92,8 @@ public class Day_11
     {
         private readonly Octopus[,] _octopusGrid;
 
-        private int _rowLength => _octopusGrid.GetLength(0);
-        private int _columnLength => _octopusGrid.GetLength(1);
-
-
+        private int RowLength => _octopusGrid.GetLength(0);
+        private int ColumnLength => _octopusGrid.GetLength(1);
 
         public DumboOctopusNavigationalSystem(Octopus[,] octoGrid)
         {
@@ -109,16 +107,16 @@ public class Day_11
             PrintGrid("Initial Grid");
             for (int i = 0; i < iterations; i++)
             {
-                AddOneEnergyLevelToAppOctopuses();
+                AddOneEnergyLevelToAllOctopuses();
 
-                //PrintGrid("After an AddOneEnergyLevelToAppOctopuses, but before the Flashes are processed");
+                //PrintGrid("After an AddOneEnergyLevelToAllOctopuses, but before the Flashes are processed");
 
                 flashes += SetOffFlashes();
 
-                //PrintGrid("After an AddOneEnergyLevelToAppOctopuses and Flashes are processed, but before Reset");
+                //PrintGrid("After an AddOneEnergyLevelToAllOctopuses and Flashes are processed, but before Reset");
                 ResetOctopusesThatHaveFlashed();
 
-                PrintGrid($"After AddOneEnergyLevelToAppOctopuses and Flashes is fully complete - Iteration: #{i + 1}");
+                PrintGrid($"After AddOneEnergyLevelToAllOctopuses and Flashes is fully complete - Iteration: #{i + 1}");
             }
 
             return flashes;
@@ -132,7 +130,7 @@ public class Day_11
             do
             {
                 step += 1;
-                AddOneEnergyLevelToAppOctopuses();
+                AddOneEnergyLevelToAllOctopuses();
 
                 SetOffFlashes();
 
@@ -145,12 +143,12 @@ public class Day_11
             return step;
         }
 
-        private void AddOneEnergyLevelToAppOctopuses()
+        private void AddOneEnergyLevelToAllOctopuses()
         {
             // this increments all cells by 1
-            for (var columnIndex = 0; columnIndex < _columnLength; columnIndex++)
+            for (var columnIndex = 0; columnIndex < ColumnLength; columnIndex++)
             {
-                for (int rowIndex = 0; rowIndex < _rowLength; rowIndex++)
+                for (int rowIndex = 0; rowIndex < RowLength; rowIndex++)
                 {
                     _octopusGrid[rowIndex, columnIndex].EnergyLevel += 1;
                 }
@@ -166,9 +164,9 @@ public class Day_11
             {
                 flashesContinue = false;
 
-                for (var columnIndex = 0; columnIndex < _columnLength; columnIndex++)
+                for (var columnIndex = 0; columnIndex < ColumnLength; columnIndex++)
                 {
-                    for (int rowIndex = 0; rowIndex < _rowLength; rowIndex++)
+                    for (int rowIndex = 0; rowIndex < RowLength; rowIndex++)
                     {
                         var currentOctopus = _octopusGrid[rowIndex, columnIndex];
                         if (currentOctopus.EnergyLevel > 9 && !currentOctopus.HasFlashed)
@@ -183,27 +181,27 @@ public class Day_11
                                 _octopusGrid[rowIndex - 1, columnIndex].EnergyLevel += 1;
                             }
                             // top right
-                            if (rowIndex > 0 && columnIndex < _columnLength - 1)
+                            if (rowIndex > 0 && columnIndex < ColumnLength - 1)
                             {
                                 _octopusGrid[rowIndex - 1, columnIndex + 1].EnergyLevel += 1;
                             }
                             // right
-                            if (columnIndex < _columnLength - 1)
+                            if (columnIndex < ColumnLength - 1)
                             {
                                 _octopusGrid[rowIndex, columnIndex + 1].EnergyLevel += 1;
                             }
                             // bottom right
-                            if (rowIndex < _rowLength - 1 && columnIndex < _columnLength - 1)
+                            if (rowIndex < RowLength - 1 && columnIndex < ColumnLength - 1)
                             {
                                 _octopusGrid[rowIndex + 1, columnIndex + 1].EnergyLevel += 1;
                             }
                             // bottom
-                            if (rowIndex < _rowLength - 1)
+                            if (rowIndex < RowLength - 1)
                             {
                                 _octopusGrid[rowIndex + 1, columnIndex].EnergyLevel += 1;
                             }
                             // bottom left
-                            if (rowIndex < _rowLength - 1 && columnIndex > 0)
+                            if (rowIndex < RowLength - 1 && columnIndex > 0)
                             {
                                 _octopusGrid[rowIndex + 1, columnIndex - 1].EnergyLevel += 1;
                             }
@@ -228,9 +226,9 @@ public class Day_11
         private void ResetOctopusesThatHaveFlashed()
         {
             bool allOctopusesFlashed = true;
-            for (var columnIndex = 0; columnIndex < _columnLength; columnIndex++)
+            for (var columnIndex = 0; columnIndex < ColumnLength; columnIndex++)
             {
-                for (int rowIndex = 0; rowIndex < _rowLength; rowIndex++)
+                for (int rowIndex = 0; rowIndex < RowLength; rowIndex++)
                 {
                     var currentOctopus = _octopusGrid[rowIndex, columnIndex];
                     currentOctopus.HasFlashed = false;
@@ -244,9 +242,9 @@ public class Day_11
 
         private bool DidAllOctopusesFlash()
         {
-            for (var columnIndex = 0; columnIndex < _columnLength; columnIndex++)
+            for (var columnIndex = 0; columnIndex < ColumnLength; columnIndex++)
             {
-                for (int rowIndex = 0; rowIndex < _rowLength; rowIndex++)
+                for (int rowIndex = 0; rowIndex < RowLength; rowIndex++)
                 {
                     var currentOctopus = _octopusGrid[rowIndex, columnIndex];
 
@@ -262,9 +260,9 @@ public class Day_11
         private void PrintGrid(string message = "no message")
         {
             TestContext.WriteLine($"{message}: ");
-            for (var columnIndex = 0; columnIndex < _columnLength; columnIndex++)
+            for (var columnIndex = 0; columnIndex < ColumnLength; columnIndex++)
             {
-                for (int rowIndex = 0; rowIndex < _rowLength; rowIndex++)
+                for (int rowIndex = 0; rowIndex < RowLength; rowIndex++)
                 {
                     TestContext.Write(_octopusGrid[rowIndex, columnIndex].EnergyLevel.ToString().PadRight(3));
                 }
