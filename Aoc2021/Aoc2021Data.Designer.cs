@@ -221,6 +221,96 @@ namespace AdventOfCode.Aoc2021 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to nu-start
+        ///rt-start
+        ///db-qh
+        ///PE-end
+        ///sl-rt
+        ///qh-end
+        ///ZH-rt
+        ///nu-rt
+        ///PE-db
+        ///db-sl
+        ///nu-ZH
+        ///nu-qh
+        ///PE-qh
+        ///ZH-db
+        ///ne-end
+        ///ne-ZH
+        ///QG-db
+        ///qh-sl
+        ///ZH-qh
+        ///start-ZH
+        ///nu-PE
+        ///uf-db
+        ///ne-sl.
+        /// </summary>
+        internal static string Day12 {
+            get {
+                return ResourceManager.GetString("Day12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to start-A
+        ///start-b
+        ///A-c
+        ///A-b
+        ///b-d
+        ///A-end
+        ///b-end.
+        /// </summary>
+        internal static string Day12Sample1 {
+            get {
+                return ResourceManager.GetString("Day12Sample1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dc-end
+        ///HN-start
+        ///start-kj
+        ///dc-start
+        ///dc-HN
+        ///LN-dc
+        ///HN-end
+        ///kj-sa
+        ///kj-HN
+        ///kj-dc.
+        /// </summary>
+        internal static string Day12Sample2 {
+            get {
+                return ResourceManager.GetString("Day12Sample2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to fs-end
+        ///he-DX
+        ///fs-he
+        ///start-DX
+        ///pj-DX
+        ///end-zg
+        ///zg-sl
+        ///zg-pj
+        ///pj-he
+        ///RW-he
+        ///fs-DX
+        ///pj-RW
+        ///zg-RW
+        ///start-pj
+        ///he-WI
+        ///zg-he
+        ///pj-fs
+        ///start-RW.
+        /// </summary>
+        internal static string Day12Sample3 {
+            get {
+                return ResourceManager.GetString("Day12Sample3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;depths&quot;:[199,
         ///200,
         ///208,

@@ -278,17 +278,11 @@ public class Day_11
         {
         }
 
-        public Octopus(int row, int column, bool hasFlashed, int energyLevel)
+        public Octopus(bool hasFlashed, int energyLevel)
         {
-            Row = row;
-            Column = column;
             HasFlashed = hasFlashed;
             EnergyLevel = energyLevel;
         }
-
-        public int Row { get; set; }
-
-        public int Column { get; set; }
 
         public int EnergyLevel { get; set; }
 
@@ -312,7 +306,7 @@ public class Day_11
                     //octoGrid[rowIndex, columnIndex] = Convert.ToInt32(inputData[columnIndex][rowIndex].ToString());
                     //TestContext.Write(octoGrid[rowIndex, columnIndex].ToString().PadRight(2));
 
-                    octopusGrid[rowIndex, columnIndex] = new Octopus(row: rowIndex, column: columnIndex, hasFlashed: false, energyLevel: Convert.ToInt32(inputData[columnIndex][rowIndex].ToString()));
+                    octopusGrid[rowIndex, columnIndex] = new Octopus(hasFlashed: false, energyLevel: Convert.ToInt32(inputData[columnIndex][rowIndex].ToString()));
                     //TestContext.Write(octopusGrid[rowIndex, columnIndex].EnergyLevel.ToString().PadRight(3));
                 }
                 //TestContext.WriteLine();
