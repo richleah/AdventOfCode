@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace AdventOfCode.Aoc2021;
@@ -33,6 +34,29 @@ public class Day_11
 
         //Assert.IsNotEmpty(inputData);
     }
+
+    private static IEnumerable<TestCaseData> inputsForPartA
+    {
+        get
+        {
+            yield return new TestCaseData(Aoc2021Data.Day11Sample, 1656);
+            yield return new TestCaseData(Aoc2021Data.Day11, 1725);
+        }
+    }
+
+    [TestCaseSource(nameof(inputsForPartA))]
+    public void When_Sample_Data_Octopus_Flashes_Should_Be(string inputData, double flashesExpected)
+    {
+        // Arrange
+        var octopusGrid = OctoGridLoader.Load(inputData);
+        
+        // Act
+        double flashes = new DumboOctopusNavigationalSystem(octopusGrid).CountFlashes(100);
+
+        //Assert
+        Assert.AreEqual(flashesExpected, flashes);
+    }
+
 
     [Test]
     public void When_Sample_Data_Octopus_Flashes_Should_Be_1656()
