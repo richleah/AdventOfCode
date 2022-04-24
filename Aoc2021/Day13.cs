@@ -92,8 +92,8 @@ public class ThermalImagingCameraPage1Decoder
         {
             for (var x = 0; x < _page1.GridOfDots.GetLength(0); x++)
             {
-                TestContext.Write($"{(_page1.GridOfDots[x, y].IsDot ? "#" : ".")}");
-                dots += _page1.GridOfDots[x, y].IsDot ? 1 : 0;
+                TestContext.Write($"{(_page1.GridOfDots[x, y] ? "#" : ".")}");
+                dots += _page1.GridOfDots[x, y] ? 1 : 0;
             }
             TestContext.WriteLine();
         }
@@ -115,8 +115,8 @@ public class ThermalImagingCameraPage1Decoder
         {
             for (var x = 0; x < _page1.GridOfDots.GetLength(0); x++)
             {
-                TestContext.Write($"{(_page1.GridOfDots[x, y].IsDot ? "#" : ".")}");
-                dots += _page1.GridOfDots[x, y].IsDot ? 1 : 0;
+                TestContext.Write($"{(_page1.GridOfDots[x, y] ? "#" : ".")}");
+                dots += _page1.GridOfDots[x, y] ? 1 : 0;
             }
             TestContext.WriteLine();
         }
@@ -124,9 +124,9 @@ public class ThermalImagingCameraPage1Decoder
         return dots;
     }
 
-    public static Cell[,] FoldTheGrid(Cell[,] gridOfDots, Fold fold)
+    public static bool[,] FoldTheGrid(bool[,] gridOfDots, Fold fold)
     {
-        Cell[,] keeperGrid;
+        bool[,] keeperGrid;
 
         if (fold.Axis == Axises.Horizontal)
         {
@@ -136,20 +136,16 @@ public class ThermalImagingCameraPage1Decoder
                 var multiplier = y - fold.Line;
                 for (var x = 0; x < gridOfDots.GetLength(0); x++)
                 {
-                    // from => to
-                    gridOfDots[x, y - (multiplier * 2)].IsDot = gridOfDots[x, y - (multiplier * 2)].IsDot || gridOfDots[x, y].IsDot;
-                    //var fromValue = gridOfDots[x, y].IsDot;
-                    //var toValue = gridOfDots[x, y - (multiplier * 2)].IsDot;
-                    //toValue = toValue || fromValue;
+                    gridOfDots[x, y - (multiplier * 2)] = gridOfDots[x, y - (multiplier * 2)] || gridOfDots[x, y];
                 }
             }
 
-            keeperGrid = new Cell[gridOfDots.GetLength(0), fold.Line];
+            keeperGrid = new bool[gridOfDots.GetLength(0), fold.Line];
             for (var y = 0; y < fold.Line; y++)
             {
                 for (var x = 0; x < keeperGrid.GetLength(0); x++)
                 {
-                    keeperGrid[x, y] = new Cell(x, y) { IsDot = gridOfDots[x, y].IsDot };
+                    keeperGrid[x, y] = gridOfDots[x, y];
                 }
             }
         }
@@ -162,20 +158,16 @@ public class ThermalImagingCameraPage1Decoder
                 for (var y = 0; y < gridOfDots.GetLength(1); y++)
                 {
                     // from => to
-                    gridOfDots[x - (multiplier * 2), y].IsDot = gridOfDots[x - (multiplier * 2), y].IsDot || gridOfDots[x, y].IsDot;
-
-                    //var fromValue = gridOfDots[x, y].IsDot;
-                    //var toValue = gridOfDots[x - (multiplier * 2), y].IsDot;
-                    //toValue = toValue || fromValue;
+                    gridOfDots[x - (multiplier * 2), y] = gridOfDots[x - (multiplier * 2), y] || gridOfDots[x, y];
                 }
             }
 
-            keeperGrid = new Cell[fold.Line, gridOfDots.GetLength(1)];
+            keeperGrid = new bool[fold.Line, gridOfDots.GetLength(1)];
             for (var y = 0; y < gridOfDots.GetLength(1); y++)
             {
                 for (var x = 0; x < fold.Line; x++)
                 {
-                    keeperGrid[x, y] = new Cell(x, y) { IsDot = gridOfDots[x, y].IsDot };
+                    keeperGrid[x, y] = gridOfDots[x, y];
                 }
             }
         }
@@ -212,20 +204,21 @@ public class ThermalCameraCodeLoader
             .ToList();
 
         // determine grid size so that I can
-        var gridOfDots = new Cell[gridInputData.Max(x => x.X) + 1, gridInputData.Max(x => x.Y) + 1];
+        //var gridOfDots = new Cell[gridInputData.Max(x => x.X) + 1, gridInputData.Max(x => x.Y) + 1];
+        var gridOfDots = new bool[gridInputData.Max(x => x.X) + 1, gridInputData.Max(x => x.Y) + 1];
 
         // build out grid
-        for (var y = 0; y < gridOfDots.GetLength(1); y++)
-        {
-            for (var x = 0; x < gridOfDots.GetLength(0); x++)
-            {
-                gridOfDots[x, y] = new Cell(x, y);
-            }
-        }
+        //for (var y = 0; y < gridOfDots.GetLength(1); y++)
+        //{
+        //    for (var x = 0; x < gridOfDots.GetLength(0); x++)
+        //    {
+        //        gridOfDots[x, y] = new Cell(x, y);
+        //    }
+        //}
 
         foreach (Point dot in gridInputData)
         {
-            gridOfDots[dot.X, dot.Y].IsDot = true;
+            gridOfDots[dot.X, dot.Y] = true;
         }
 
         return new Page1(gridOfDots, folds);
@@ -234,30 +227,15 @@ public class ThermalCameraCodeLoader
 
 public class Page1
 {
-    public Page1(Cell[,] gridOfDots, List<Fold> folds)
+    public Page1(bool[,] gridOfDots, List<Fold> folds)
     {
         GridOfDots = gridOfDots;
         Folds = folds;
     }
 
-    public Cell[,] GridOfDots { get; set; }
+    public bool[,] GridOfDots { get; set; }
 
     public List<Fold> Folds { get; set; }
-}
-
-public class Cell
-{
-    public Cell(int x, int y)
-    {
-        X = x;
-        Y = y;
-    }
-
-    public int X { get; }
-
-    public int Y { get; }
-
-    public bool IsDot { get; set; }
 }
 
 public class Fold
