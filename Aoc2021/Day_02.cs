@@ -12,7 +12,7 @@ namespace AdventOfCode.Aoc2021;
 // https://adventofcode.com/2021/day/2
 
 [TestFixture]
-public class Day_2
+public class Day_02
 {
     [SetUp]
     public void Setup()

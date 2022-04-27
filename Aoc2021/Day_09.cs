@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace AdventOfCode.Aoc2021;
 
 [TestFixture]
-public class Day_9
+public class Day_09
 {
     [SetUp]
     public void Setup()

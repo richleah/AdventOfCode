@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace AdventOfCode.Aoc2021;
 
-public class Day13
+public class Day_13
 {
     [SetUp]
     public void Setup()

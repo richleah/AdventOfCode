@@ -9,7 +9,7 @@ namespace AdventOfCode.Aoc2021;
 // https://adventofcode.com/2021/day/2
 
 [TestFixture(Ignore = "Not completed")]
-public class Day_7
+public class Day_07
 {
 
     [SetUp]
