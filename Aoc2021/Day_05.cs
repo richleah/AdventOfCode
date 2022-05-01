@@ -172,7 +172,6 @@ namespace AdventOfCode.Aoc2021
 
             var coordinatePairs = inputData
                 .Select(x => x.Split("->", StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
-                //.Select(x => new Tuple<Point,Point>() { x[0].Split(",").Select(y => new Point(y[0], y[1])).First(), x[1].Split(",").Select(z => new Point(z[0], z[1])).First() })
                 .Select(x =>
                 {
                     var beginCoordinate = x[0].Split(",");
