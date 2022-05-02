@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using NUnit.Framework;
+using MathNet.Numerics.Statistics;
 
 namespace AdventOfCode.Aoc2021;
 
 // https://adventofcode.com/2021/day/2
 
-[TestFixture(Ignore = "Not completed")]
+//[TestFixture(Ignore = "Not completed")]
 public class Day_07
 {
 
@@ -22,9 +22,9 @@ public class Day_07
     {
         // Arrange
         string? data = Aoc2021Data.Day7Sample;
-        var crabHorizontalPositions = data.Split(",").Select(x => Convert.ToInt32(x)).ToList();
+        var crabHorizontalPositions = CrabSubmarinePositionLoader.Load(data);
 
-        foreach (int position in crabHorizontalPositions)
+        foreach (double position in crabHorizontalPositions)
         {
             TestContext.WriteLine(position);
         }
@@ -36,50 +36,129 @@ public class Day_07
         Assert.IsNotEmpty(crabHorizontalPositions);
     }
 
-    [Test]
-    public void Should_determine_fuel_costs_with_sample_data()
+    private static IEnumerable<TestCaseData> InputsForPartA
+    {
+        get
+        {
+            yield return new TestCaseData(Aoc2021Data.Day7Sample, 37);
+            yield return new TestCaseData(Aoc2021Data.Day7, 335330);
+        }
+    }
+
+    [TestCaseSource(nameof(InputsForPartA))]
+    public void When_InputData_PartA_Fuel_Costs_Should_Be(string inputData, int expectedFuelCosts)
     {
         // Arrange
-        string? data = Aoc2021Data.Day7Sample;
-        var crabPositions = data.Split(",").Select(x => Convert.ToInt32(x)).ToList();
+        var crabPositions = CrabSubmarinePositionLoader.Load(inputData);
 
         // Act
-        var optimizer = new CrabPositionOptimizer(crabPositions);
+        double fuelCosts = new CrabSubmarinePositionOptimizer(crabPositions).CalculateFuelCostsToLineUpHorizontally();
 
         //Assert
-        Assert.AreEqual(37, optimizer.FuelRequired().Fuel);
+        Assert.AreEqual(expectedFuelCosts, fuelCosts);
     }
 
+    private static IEnumerable<TestCaseData> InputsForPartB
+    {
+        get
+        {
+            yield return new TestCaseData(Aoc2021Data.Day7Sample, 168);
+            yield return new TestCaseData(Aoc2021Data.Day7, 92439766);
+        }
+    }
+
+    [TestCaseSource(nameof(InputsForPartB))]
+    public void When_InputData_PartA_Real_Fuel_Costs_Should_Be(string inputData, int expectedFuelCosts)
+    {
+        // Arrange
+        var crabPositions = CrabSubmarinePositionLoader.Load(inputData);
+
+        // Act
+        var fuelCosts = new CrabSubmarinePositionOptimizer(crabPositions).CalculateRealFuelCostsToLineUpHorizontally();
+
+        //Assert
+        Assert.AreEqual(expectedFuelCosts, fuelCosts);
+    }
 }
 
-public class CrabPositionOptimizer
+public class CrabSubmarinePositionOptimizer
 {
-    private readonly List<int> _crabPositions;
+    private readonly List<double> _crabSubmarinePositions;
 
-    public CrabPositionOptimizer(List<int> crabPositions)
+    public CrabSubmarinePositionOptimizer(List<double> crabSubmarinePositions)
     {
-        _crabPositions = crabPositions;
+        _crabSubmarinePositions = crabSubmarinePositions;
     }
 
-    public PositionFuel FuelRequired()
+    public double CalculateFuelCostsToLineUpHorizontally()
     {
-        var optimalPosition = new PositionFuel();
+        double fuelRequired = 0;
 
-        var averagePosition = (int)Math.Round(_crabPositions.Average());
-        TestContext.WriteLine($"Average Position: {averagePosition}");
-
-        foreach (int crabPosition in _crabPositions)
+        double median = _crabSubmarinePositions.Median();
+        
+        foreach (double crabPosition in _crabSubmarinePositions)
         {
-            optimalPosition.Fuel += Math.Abs(averagePosition - crabPosition);
+            fuelRequired += Math.Abs(median - crabPosition);
         }
 
-        return optimalPosition;
+        return fuelRequired;
     }
 
-    public class PositionFuel
+    public double CalculateRealFuelCostsToLineUpHorizontally()
     {
-        public int Position { get; set; }
+        // find the average of all of the crab sub positions
+        var averagePosition = (int)Math.Round(_crabSubmarinePositions.Average());
 
-        public int Fuel { get; set; }
+        // calculate the costs of moving to the average position
+        double totalFuelCostsAverage = CalculateFuelCosts(averagePosition);
+        TestContext.WriteLine($"Average Costs: {totalFuelCostsAverage}");
+
+        // start moving from the average position, both up (+1) and down (-1) and calculate costs for that
+        // position and continue until you find the lowest costs and return it
+        int position = averagePosition;
+        double nextFuelCost = totalFuelCostsAverage;
+        double lowestFuelCost;
+        do
+        {
+            lowestFuelCost = nextFuelCost;
+            nextFuelCost = CalculateFuelCosts(--position);
+            TestContext.WriteLine($"Position: {position} - MinusOne Costs: {nextFuelCost}");
+        } while (nextFuelCost < lowestFuelCost);
+        
+        position = averagePosition;
+        nextFuelCost = lowestFuelCost;
+        do
+        {
+            lowestFuelCost = nextFuelCost;
+            nextFuelCost = CalculateFuelCosts(++position);
+            TestContext.WriteLine($"Position: {position} - PlusOne Costs: {nextFuelCost}");
+        } while (nextFuelCost < lowestFuelCost);
+        
+        return lowestFuelCost;
+    }
+
+    private double CalculateFuelCosts(int position)
+    {
+        double totalFuelCosts = 0;
+        TestContext.WriteLine($"Selected AVG Position: {position}");
+
+        foreach (double crabPosition in _crabSubmarinePositions)
+        {
+            //N * (N - 1) / 2;
+            var positionDifference = Math.Abs(position - crabPosition) + 1;
+            var fuelCosts = positionDifference * ((positionDifference - 1) / 2);
+            totalFuelCosts += fuelCosts;
+            //TestContext.WriteLine($"    Crab position: {crabPosition.ToString().PadLeft(2)} - Position diff: {positionDifference} - Fuel Cost: {fuelCosts}");
+        }
+
+        return totalFuelCosts;
+    }
+}
+
+public class CrabSubmarinePositionLoader
+{
+    public static List<double> Load(string data)
+    {
+        return data.Split(",").Select(Convert.ToDouble).ToList();
     }
 }
