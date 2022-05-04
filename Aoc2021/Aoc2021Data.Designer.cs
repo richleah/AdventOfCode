@@ -405,6 +405,97 @@ namespace AdventOfCode.Aoc2021 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to VFHKKOKKCPBONFHNPHPN
+        ///
+        ///VS -&gt; B
+        ///HK -&gt; B
+        ///FO -&gt; P
+        ///NC -&gt; F
+        ///VN -&gt; C
+        ///BS -&gt; O
+        ///HS -&gt; K
+        ///NS -&gt; C
+        ///CV -&gt; P
+        ///NV -&gt; C
+        ///PH -&gt; H
+        ///PB -&gt; B
+        ///PK -&gt; K
+        ///HF -&gt; P
+        ///FV -&gt; C
+        ///NN -&gt; H
+        ///VO -&gt; K
+        ///VP -&gt; P
+        ///BC -&gt; B
+        ///KK -&gt; S
+        ///OK -&gt; C
+        ///PN -&gt; H
+        ///SB -&gt; V
+        ///KO -&gt; P
+        ///KH -&gt; C
+        ///KS -&gt; S
+        ///FP -&gt; B
+        ///PV -&gt; B
+        ///BO -&gt; C
+        ///OS -&gt; H
+        ///NB -&gt; S
+        ///SP -&gt; C
+        ///HN -&gt; N
+        ///FN -&gt; B
+        ///PO -&gt; O
+        ///FS -&gt; O
+        ///NH -&gt; B
+        ///SO -&gt; P
+        ///OB -&gt; S
+        ///KC -&gt; C
+        ///OO -&gt; H
+        ///BB -&gt; V
+        ///SC -&gt; F
+        ///NP -&gt; P
+        ///SH -&gt; C
+        ///BH -&gt; O
+        ///BP -&gt; F
+        ///CC -&gt; S
+        ///BN -&gt; H
+        ///SS -&gt; P
+        ///BF -&gt; B
+        ///VK -&gt; P
+        ///OV -&gt; H
+        ///FC -&gt; S
+        ///VB [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day14 {
+            get {
+                return ResourceManager.GetString("Day14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NNCB
+        ///
+        ///CH -&gt; B
+        ///HH -&gt; N
+        ///CB -&gt; H
+        ///NH -&gt; C
+        ///HB -&gt; C
+        ///HC -&gt; B
+        ///HN -&gt; C
+        ///NN -&gt; C
+        ///BH -&gt; H
+        ///NC -&gt; B
+        ///NB -&gt; B
+        ///BN -&gt; B
+        ///BB -&gt; N
+        ///BC -&gt; B
+        ///CC -&gt; N
+        ///CN -&gt; C.
+        /// </summary>
+        internal static string Day14Sample {
+            get {
+                return ResourceManager.GetString("Day14Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;depths&quot;:[199,
         ///200,
         ///208,
