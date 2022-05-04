@@ -496,6 +496,38 @@ namespace AdventOfCode.Aoc2021 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 2494188795949368426672935997553436999123973817111494977966298896479213563868828787114774871959993495
+        ///7269295166912819128199218896192745233371189151296812199288995976199874739992471696989914173889976925
+        ///5191212388827998986649912824634749279971948589689238817721846893532697679994545789897911889729995897
+        ///2168589418228699841979496964487152857627622699771987389157912193827151789199146397936892984945186648
+        ///6173939628157711976563997464999974959831921613389971361747448844585131388314689679172394799717331399
+        ///58 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day15 {
+            get {
+                return ResourceManager.GetString("Day15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1163751742
+        ///1381373672
+        ///2136511328
+        ///3694931569
+        ///7463417111
+        ///1319128137
+        ///1359912421
+        ///3125421639
+        ///1293138521
+        ///2311944581.
+        /// </summary>
+        internal static string Day15Sample {
+            get {
+                return ResourceManager.GetString("Day15Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;depths&quot;:[199,
         ///200,
         ///208,
