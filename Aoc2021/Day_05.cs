@@ -19,7 +19,7 @@ public class Day_05
         // Arrange
 
         // Act
-        List<(Point, Point)> ventCoordinatePairs = HydrothermalVentsDataLoader.Load(Aoc2021Data.Day5Sample);
+        List<(Point, Point)> ventCoordinatePairs = HydrothermalVentsDataLoader.Load(Aoc2021Data.Day05Sample);
 
         //Assert
         Assert.IsNotNull(ventCoordinatePairs);
@@ -31,8 +31,8 @@ public class Day_05
     {
         get
         {
-            yield return new TestCaseData(Aoc2021Data.Day5Sample, 10, 5);
-            yield return new TestCaseData(Aoc2021Data.Day5, 1000, 7318);
+            yield return new TestCaseData(Aoc2021Data.Day05Sample, 10, 5);
+            yield return new TestCaseData(Aoc2021Data.Day05, 1000, 7318);
         }
     }
 
@@ -53,8 +53,8 @@ public class Day_05
     {
         get
         {
-            yield return new TestCaseData(Aoc2021Data.Day5Sample, 10, 12);
-            yield return new TestCaseData(Aoc2021Data.Day5, 1000, 19939);
+            yield return new TestCaseData(Aoc2021Data.Day05Sample, 10, 12);
+            yield return new TestCaseData(Aoc2021Data.Day05, 1000, 19939);
         }
     }
 

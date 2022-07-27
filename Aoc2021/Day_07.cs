@@ -21,7 +21,7 @@ public class Day_07
     public void Should_load_sample_data()
     {
         // Arrange
-        string? data = Aoc2021Data.Day7Sample;
+        string? data = Aoc2021Data.Day07Sample;
         var crabHorizontalPositions = CrabSubmarinePositionLoader.Load(data);
 
         foreach (double position in crabHorizontalPositions)
@@ -40,8 +40,8 @@ public class Day_07
     {
         get
         {
-            yield return new TestCaseData(Aoc2021Data.Day7Sample, 37);
-            yield return new TestCaseData(Aoc2021Data.Day7, 335330);
+            yield return new TestCaseData(Aoc2021Data.Day07Sample, 37);
+            yield return new TestCaseData(Aoc2021Data.Day07, 335330);
         }
     }
 
@@ -62,8 +62,8 @@ public class Day_07
     {
         get
         {
-            yield return new TestCaseData(Aoc2021Data.Day7Sample, 168);
-            yield return new TestCaseData(Aoc2021Data.Day7, 92439766);
+            yield return new TestCaseData(Aoc2021Data.Day07Sample, 168);
+            yield return new TestCaseData(Aoc2021Data.Day07, 92439766);
         }
     }
 

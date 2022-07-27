@@ -21,7 +21,7 @@ public class Day_06
     public void Should_load_sample_data()
     {
         // Arrange
-        string? data = Aoc2021Data.Day6Sample;
+        string? data = Aoc2021Data.Day06Sample;
         var lanternFishDaysTilSpawn = data.Split(",").Select(x => Convert.ToInt32(x)).ToList();
 
         foreach (int daysTilSpawn in lanternFishDaysTilSpawn)
@@ -42,7 +42,7 @@ public class Day_06
     public void Should_fish_count_With_sample_dataV1(int daysToRunSimulation, long countOfLanternFish)
     {
         // Arrange
-        string? data = Aoc2021Data.Day6Sample;
+        string? data = Aoc2021Data.Day06Sample;
         var lanternFishDaysTilSpawn = data.Split(",").Select(x => Convert.ToInt32(x)).ToList();
 
         // Act
@@ -58,7 +58,7 @@ public class Day_06
     public async Task Should_fish_count_With_sample_dataV2(int daysToRunSimulation, long countOfLanternFish)
     {
         // Arrange
-        string? data = Aoc2021Data.Day6Sample;
+        string? data = Aoc2021Data.Day06Sample;
         var lanternFishDaysTilSpawn = data.Split(",").Select(x => Convert.ToInt32(x)).ToList();
 
         // Act
@@ -80,7 +80,7 @@ public class Day_06
     public async Task Should_fish_count_With_sample_dataV3(int daysToRunSimulation, long countOfLanternFish)
     {
         // Arrange
-        string? data = Aoc2021Data.Day6Sample;
+        string? data = Aoc2021Data.Day06Sample;
         var lanternFishDaysTilSpawn = data.Split(",").Select(x => Convert.ToInt32(x)).ToList();
 
         //lanternFishDaysTilSpawn = new List<int>() {1};
@@ -98,7 +98,7 @@ public class Day_06
     public void Should_fish_count_With_sample_dataV4(int daysToRunSimulation, long countOfLanternFish)
     {
         // Arrange
-        string? data = Aoc2021Data.Day6Sample;
+        string? data = Aoc2021Data.Day06Sample;
         //int daysToRunSimulation = 200;
         //long countOfLanternFish = 1;
         
@@ -115,7 +115,7 @@ public class Day_06
     public void Should_fish_count_With_real_dataV4(int daysToRunSimulation, long countOfLanternFish)
     {
         // Arrange
-        string? data = Aoc2021Data.Day6;
+        string? data = Aoc2021Data.Day06;
         //int daysToRunSimulation = 200;
         //long countOfLanternFish = 1;
         

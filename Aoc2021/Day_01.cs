@@ -19,14 +19,14 @@ public class Day_01
     [Test]
     public void Day_1_Sample()
     {
-        var sonar = JsonSerializer.Deserialize<SonarMeasurements>(Aoc2021Data.Day1Sample);
+        var sonar = JsonSerializer.Deserialize<SonarMeasurements>(Aoc2021Data.Day01Sample);
         Assert.AreEqual(7, CountDepthIncreases(sonar.Depths));
     }
 
     [Test]
     public void Day_1_exercise()
     {
-        var sonar = JsonSerializer.Deserialize<SonarMeasurements>(Aoc2021Data.Day1);
+        var sonar = JsonSerializer.Deserialize<SonarMeasurements>(Aoc2021Data.Day01);
         Assert.AreEqual(1195, CountDepthIncreases(sonar.Depths));
     }
 
@@ -55,14 +55,14 @@ public class Day_01
     [Test]
     public void Day_1b_Sample()
     {
-        var sonar = JsonSerializer.Deserialize<SonarMeasurements>(Aoc2021Data.Day1Sample);
+        var sonar = JsonSerializer.Deserialize<SonarMeasurements>(Aoc2021Data.Day01Sample);
         Assert.AreEqual(5, CountDepthIncreasesV2(sonar.Depths));
     }
 
     [Test]
     public void Day_1b_Exercise()
     {
-        var sonar = JsonSerializer.Deserialize<SonarMeasurements>(Aoc2021Data.Day1);
+        var sonar = JsonSerializer.Deserialize<SonarMeasurements>(Aoc2021Data.Day01);
         Assert.AreEqual(1235, CountDepthIncreasesV2(sonar.Depths));
     }
 

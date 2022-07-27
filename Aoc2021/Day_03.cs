@@ -45,7 +45,7 @@ public class Day_03
     {
         // Arrange
         //var diagData = JsonSerializer.Deserialize<List<string>>(Aoc2021Data.Day3SampleB);
-        var document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        var document = JsonDocument.Parse(Aoc2021Data.Day03Sample);
         var diagData = document.RootElement.GetProperty("data");
 
         // Act
@@ -64,7 +64,7 @@ public class Day_03
     public void Should_generate_gamma_rate_of_22_for_sample_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03Sample);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -79,7 +79,7 @@ public class Day_03
     public void Should_generate_epsilon_rate_of_9_for_sample_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03Sample);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -94,7 +94,7 @@ public class Day_03
     public void Should_generate_power_consumption_of_198_for_sample_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03Sample);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -109,7 +109,7 @@ public class Day_03
     public void Should_generate_gamma_rate_of_2277_for_actual_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -124,7 +124,7 @@ public class Day_03
     public void Should_generate_epsilon_rate_of_1818_for_actual_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -139,7 +139,7 @@ public class Day_03
     public void Should_generate_power_consumption_of_4139586_for_actual_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -156,7 +156,7 @@ public class Day_03
     public void Should_generate_oxygen_generator_rating_of_23_for_sample_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03Sample);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -171,7 +171,7 @@ public class Day_03
     public void Should_generate_c02_scrubber_rating_of_10_for_sample_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03Sample);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -186,7 +186,7 @@ public class Day_03
     public void Should_generate_life_support_rating_of_230_for_sample_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3Sample);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03Sample);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -201,7 +201,7 @@ public class Day_03
     public void Should_generate_oxygen_generator_rating_of_2539_for_actual_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -216,7 +216,7 @@ public class Day_03
     public void Should_generate_c02_scrubber_rating_of_709_for_actual_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 
@@ -231,7 +231,7 @@ public class Day_03
     public void Should_generate_life_support_rating_of_1800151_for_actual_data()
     {
         // Arrange
-        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day3);
+        JsonDocument document = JsonDocument.Parse(Aoc2021Data.Day03);
         JsonElement diagnosticData = document.RootElement.GetProperty("data");
         var diagnostics = diagnosticData.EnumerateArray().Select(diagnosticDatum => diagnosticDatum.ToString()).ToList();
 

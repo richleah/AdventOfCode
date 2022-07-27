@@ -19,7 +19,7 @@ public class Day_08
     public void Should_load_sample_data()
     {
         // Arrange
-        string? data = Aoc2021Data.Day8Sample;
+        string? data = Aoc2021Data.Day08Sample;
         string[] inputData = data.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
         List<List<string>> listOfSignalPatterns = new();
         List<List<string>> listOfOutput = new();
@@ -47,7 +47,7 @@ public class Day_08
     public void When_SampleInput_Count_Should_Be_26()
     {
         // Arrange
-        string[] inputData = Aoc2021Data.Day8Sample.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
+        string[] inputData = Aoc2021Data.Day08Sample.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
 
         // Act
         var segmentDisplayDataSets = SevenSegmentDisplayDataTransformer.Transform(inputData);
@@ -61,7 +61,7 @@ public class Day_08
     public void When_Input_Count_Should_Be_534()
     {
         // Arrange
-        string[] inputData = Aoc2021Data.Day8.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
+        string[] inputData = Aoc2021Data.Day08.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
 
         // Act
         var segmentDisplayDataSets = SevenSegmentDisplayDataTransformer.Transform(inputData);
@@ -75,7 +75,7 @@ public class Day_08
     public void When_SampleInput_OutputCount_Should_Be_61229()
     {
         // Arrange
-        string[] inputData = Aoc2021Data.Day8Sample.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
+        string[] inputData = Aoc2021Data.Day08Sample.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
 
         // Act
         var segmentDisplayDataSets = SevenSegmentDisplayDataTransformer.Transform(inputData);
@@ -89,7 +89,7 @@ public class Day_08
     public void When_SampleInput_OutputCount_Should_Be_1070188()
     {
         // Arrange
-        string[] inputData = Aoc2021Data.Day8.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
+        string[] inputData = Aoc2021Data.Day08.Split(Environment.NewLine, StringSplitOptions.None | StringSplitOptions.RemoveEmptyEntries);
 
         // Act
         var segmentDisplayDataSets = SevenSegmentDisplayDataTransformer.Transform(inputData);

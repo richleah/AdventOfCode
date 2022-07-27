@@ -147,9 +147,483 @@ namespace AdventOfCode.Aoc2021 {
         ///364,
         ///3 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Day1 {
+        internal static string Day01 {
             get {
-                return ResourceManager.GetString("Day1", resourceCulture);
+                return ResourceManager.GetString("Day01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 184
+        ///205
+        ///211
+        ///213
+        ///227
+        ///225
+        ///224
+        ///228
+        ///232
+        ///231
+        ///217
+        ///230
+        ///231
+        ///237
+        ///250
+        ///257
+        ///256
+        ///255
+        ///260
+        ///261
+        ///250
+        ///252
+        ///243
+        ///242
+        ///240
+        ///248
+        ///253
+        ///261
+        ///262
+        ///241
+        ///227
+        ///234
+        ///235
+        ///236
+        ///237
+        ///264
+        ///267
+        ///246
+        ///249
+        ///237
+        ///258
+        ///255
+        ///257
+        ///259
+        ///253
+        ///262
+        ///263
+        ///271
+        ///252
+        ///254
+        ///249
+        ///255
+        ///258
+        ///267
+        ///278
+        ///281
+        ///282
+        ///287
+        ///298
+        ///292
+        ///282
+        ///283
+        ///286
+        ///281
+        ///274
+        ///272
+        ///268
+        ///267
+        ///272
+        ///288
+        ///293
+        ///316
+        ///348
+        ///340
+        ///337
+        ///341
+        ///344
+        ///343
+        ///358
+        ///356
+        ///358
+        ///359
+        ///364
+        ///366
+        ///365
+        ///368
+        ///384
+        ///385
+        ///393
+        ///387
+        ///388
+        ///369
+        ///376
+        ///393
+        ///395
+        ///400
+        ///401
+        ///402
+        ///401
+        ///404
+        ///382
+        ///381
+        ///38 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day01A {
+            get {
+                return ResourceManager.GetString("Day01A", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;depths&quot;:[199,
+        ///200,
+        ///208,
+        ///210,
+        ///200,
+        ///207,
+        ///240,
+        ///269,
+        ///260,
+        ///263]}.
+        /// </summary>
+        internal static string Day01Sample {
+            get {
+                return ResourceManager.GetString("Day01Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 199
+        ///200
+        ///208
+        ///210
+        ///200
+        ///207
+        ///240
+        ///269
+        ///260
+        ///263.
+        /// </summary>
+        internal static string Day01SampleA {
+            get {
+                return ResourceManager.GetString("Day01SampleA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///&quot;moves&quot;:[
+        ///&quot;forward 3&quot;,
+        ///&quot;down 9&quot;,
+        ///&quot;forward 6&quot;,
+        ///&quot;down 3&quot;,
+        ///&quot;forward 8&quot;,
+        ///&quot;down 3&quot;,
+        ///&quot;down 4&quot;,
+        ///&quot;forward 3&quot;,
+        ///&quot;forward 5&quot;,
+        ///&quot;up 7&quot;,
+        ///&quot;forward 1&quot;,
+        ///&quot;forward 1&quot;,
+        ///&quot;forward 5&quot;,
+        ///&quot;down 8&quot;,
+        ///&quot;down 5&quot;,
+        ///&quot;forward 3&quot;,
+        ///&quot;forward 2&quot;,
+        ///&quot;forward 4&quot;,
+        ///&quot;down 7&quot;,
+        ///&quot;up 2&quot;,
+        ///&quot;up 2&quot;,
+        ///&quot;down 5&quot;,
+        ///&quot;down 5&quot;,
+        ///&quot;down 8&quot;,
+        ///&quot;down 2&quot;,
+        ///&quot;down 4&quot;,
+        ///&quot;forward 8&quot;,
+        ///&quot;forward 8&quot;,
+        ///&quot;up 2&quot;,
+        ///&quot;down 2&quot;,
+        ///&quot;up 8&quot;,
+        ///&quot;up 4&quot;,
+        ///&quot;forward 7&quot;,
+        ///&quot;up 8&quot;,
+        ///&quot;down 6&quot;,
+        ///&quot;forward 9&quot;,
+        ///&quot;forward 6&quot;,
+        ///&quot;forward 5&quot;,
+        ///&quot;up 1&quot;,
+        ///&quot;forward 6&quot;,
+        ///&quot;forward 8&quot;,
+        ///&quot;down  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day02 {
+            get {
+                return ResourceManager.GetString("Day02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///   &quot;moves&quot;:[
+        ///      &quot;forward 5&quot;,
+        ///      &quot;down 5&quot;,
+        ///      &quot;forward 8&quot;,
+        ///      &quot;up 3&quot;,
+        ///      &quot;down 8&quot;,
+        ///      &quot;forward 2&quot;
+        ///   ]
+        ///}.
+        /// </summary>
+        internal static string Day02Sample {
+            get {
+                return ResourceManager.GetString("Day02Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;data&quot;:[
+        ///&quot;010100010111&quot;,
+        ///&quot;100100100110&quot;,
+        ///&quot;100110111001&quot;,
+        ///&quot;011001011011&quot;,
+        ///&quot;010000110111&quot;,
+        ///&quot;000011101001&quot;,
+        ///&quot;011000011101&quot;,
+        ///&quot;101111011111&quot;,
+        ///&quot;011001011010&quot;,
+        ///&quot;111100001001&quot;,
+        ///&quot;111111000110&quot;,
+        ///&quot;100010100110&quot;,
+        ///&quot;011100100100&quot;,
+        ///&quot;011111010000&quot;,
+        ///&quot;111010001100&quot;,
+        ///&quot;010111001110&quot;,
+        ///&quot;100010100100&quot;,
+        ///&quot;101000010000&quot;,
+        ///&quot;011101110100&quot;,
+        ///&quot;100010011000&quot;,
+        ///&quot;001111110011&quot;,
+        ///&quot;111001100001&quot;,
+        ///&quot;010000011001&quot;,
+        ///&quot;000011101010&quot;,
+        ///&quot;100010101100&quot;,
+        ///&quot;111011100010&quot;,
+        ///&quot;110000100001&quot;,
+        ///&quot;101010110001&quot;,
+        ///&quot;111101110101&quot;,
+        ///&quot;0010100 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day03 {
+            get {
+                return ResourceManager.GetString("Day03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {&quot;data&quot;:[&quot;00100&quot;,
+        ///&quot;11110&quot;,
+        ///&quot;10110&quot;,
+        ///&quot;10111&quot;,
+        ///&quot;10101&quot;,
+        ///&quot;01111&quot;,
+        ///&quot;00111&quot;,
+        ///&quot;11100&quot;,
+        ///&quot;10000&quot;,
+        ///&quot;11001&quot;,
+        ///&quot;00010&quot;,
+        ///&quot;01010&quot;]}.
+        /// </summary>
+        internal static string Day03Sample {
+            get {
+                return ResourceManager.GetString("Day03Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 31,50,68,16,25,15,28,80,41,8,75,45,96,9,3,98,83,27,62,42,59,99,95,13,55,10,23,84,18,76,87,56,88,66,1,58,92,89,19,54,85,74,39,93,77,26,30,52,69,48,91,73,72,38,64,53,32,51,6,29,17,90,34,61,70,4,7,57,44,97,82,37,43,14,81,65,11,22,5,36,71,35,78,12,0,94,47,49,33,79,63,86,40,21,24,46,20,2,67,60
+        ///
+        ///95 91 54 75 45
+        ///46 94 39 44 85
+        ///31 43 24  2 70
+        ///90 58  4 30 77
+        ///13 26 38 52 34
+        ///
+        ///68 14 99 63 46
+        ///67 16 82 10  8
+        ///55 52 41 51  4
+        ///90 17 32 44 74
+        ///89 94 73 56 36
+        ///
+        /// 6 91  2 28 71
+        /// 7 88 37 21 36
+        ///95 32 84 57  8
+        ///13 79 8 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day04 {
+            get {
+                return ResourceManager.GetString("Day04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1
+        ///
+        ///22 13 17 11  0
+        /// 8  2 23  4 24
+        ///21  9 14 16  7
+        /// 6 10  3 18  5
+        /// 1 12 20 15 19
+        ///
+        /// 3 15  0  2 22
+        /// 9 18 13 17  5
+        ///19  8  7 25 23
+        ///20 11 10 24  4
+        ///14 21 16 12  6
+        ///
+        ///14 21 17 24  4
+        ///10 16 15  9 19
+        ///18  8 23 26 20
+        ///22 11 13  6  5
+        /// 2  0 12  3  7.
+        /// </summary>
+        internal static string Day04Sample {
+            get {
+                return ResourceManager.GetString("Day04Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 959,103 -&gt; 139,923
+        ///899,63 -&gt; 899,53
+        ///591,871 -&gt; 364,644
+        ///739,913 -&gt; 310,484
+        ///460,309 -&gt; 460,705
+        ///351,389 -&gt; 351,837
+        ///420,55 -&gt; 420,541
+        ///916,520 -&gt; 382,520
+        ///136,604 -&gt; 295,604
+        ///343,59 -&gt; 142,59
+        ///951,206 -&gt; 806,206
+        ///984,950 -&gt; 61,27
+        ///739,388 -&gt; 988,388
+        ///374,370 -&gt; 644,370
+        ///403,504 -&gt; 798,899
+        ///943,535 -&gt; 229,535
+        ///149,227 -&gt; 583,661
+        ///62,126 -&gt; 62,352
+        ///131,391 -&gt; 131,717
+        ///254,944 -&gt; 254,220
+        ///572,111 -&gt; 572,47
+        ///336,249 -&gt; 830,743
+        ///898,858 -&gt; 203,163
+        ///203,320 -&gt; 825,942
+        ///19,318 -&gt; 19,120
+        ///740,432 -&gt; 740,39
+        ///591,3 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day05 {
+            get {
+                return ResourceManager.GetString("Day05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0,9 -&gt; 5,9
+        ///8,0 -&gt; 0,8
+        ///9,4 -&gt; 3,4
+        ///2,2 -&gt; 2,1
+        ///7,0 -&gt; 7,4
+        ///6,4 -&gt; 2,0
+        ///0,9 -&gt; 2,9
+        ///3,4 -&gt; 1,4
+        ///0,0 -&gt; 8,8
+        ///5,5 -&gt; 8,2.
+        /// </summary>
+        internal static string Day05Sample {
+            get {
+                return ResourceManager.GetString("Day05Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5,4,3,5,1,1,2,1,2,1,3,2,3,4,5,1,2,4,3,2,5,1,4,2,1,1,2,5,4,4,4,1,5,4,5,2,1,2,5,5,4,1,3,1,4,2,4,2,5,1,3,5,3,2,3,1,1,4,5,2,4,3,1,5,5,1,3,1,3,2,2,4,1,3,4,3,3,4,1,3,4,3,4,5,2,1,1,1,4,5,5,1,1,3,2,4,1,2,2,2,4,1,2,5,5,1,4,5,2,4,2,1,5,4,1,3,4,1,2,3,1,5,1,3,4,5,4,1,4,3,3,3,5,5,1,1,5,1,5,5,1,5,2,1,5,1,2,3,5,5,1,3,3,1,5,3,4,3,4,3,2,5,2,1,2,5,1,1,1,1,5,1,1,4,3,3,5,1,1,1,4,4,1,3,3,5,5,4,3,2,1,2,2,3,4,1,5,4,3,1,1,5,1,4,2,3,2,2,3,4,1,3,4,1,4,3,4,3,1,3,3,1,1,4,1,1,1,4,5,3,1,1,2,5,2,5,1,5,3,3,1,3,5,5,1,5,4,3,1,5,1,1,5,5,1,1, [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day06 {
+            get {
+                return ResourceManager.GetString("Day06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3,4,3,1,2.
+        /// </summary>
+        internal static string Day06Sample {
+            get {
+                return ResourceManager.GetString("Day06Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1101,1,29,67,1102,0,1,65,1008,65,35,66,1005,66,28,1,67,65,20,4,0,1001,65,1,65,1106,0,8,99,35,67,101,99,105,32,110,39,101,115,116,32,112,97,115,32,117,110,101,32,105,110,116,99,111,100,101,32,112,114,111,103,114,97,109,10,20,1091,861,228,628,186,980,996,710,541,354,1611,69,1331,91,1220,447,523,38,1286,244,643,1069,566,70,155,1710,1266,120,302,72,232,387,1086,278,1122,605,1559,98,111,1816,795,543,1217,304,356,129,839,704,49,523,370,74,13,232,179,101,664,892,266,622,197,404,147,882,435,504,48,766,684,1362,136, [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day07 {
+            get {
+                return ResourceManager.GetString("Day07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 16,1,2,0,4,2,7,1,2,14.
+        /// </summary>
+        internal static string Day07Sample {
+            get {
+                return ResourceManager.GetString("Day07Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to fdeba beagfd gbafe dagb dbf ecfad bd dgcaefb fbecgd abfecg | dgba dfb ecadf bdf
+        ///dgfc egdbaf afgcbe eafdbcg bcgad bdg fdbacg gd ecabd bafgc | gd gbd dg febgac
+        ///dfebc bceadf ebacf gdceb fd dfea cdgfba afbgec dfb fdaecbg | cgafbde efbagc faed gecdb
+        ///dbaef fabgd fcaedb cgadf aefbgd cabefg gfb bceagdf bg ebdg | gdbfae geafdbc bafgdce dbgfa
+        ///aebgd adg dg dgcabef facedg cfaebd dfbega begca bfgd dbafe | abdecf eafbd fdgb ebdfgca
+        ///bae febac abcgf eabfgd cbagfd gefcba abedfcg efcda eb becg | fcgab gafbed aedcfbg eb        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day08 {
+            get {
+                return ResourceManager.GetString("Day08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe
+        ///edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec | fcgedb cgb dgebacf gc
+        ///fgaebd cg bdaec gdafb agbcfd gdcbef bgcad gfac gcb cdgabef | cg cg fdcagb cbg
+        ///fbegcd cbd adcefb dageb afcb bc aefdc ecdab fgdeca fcdbega | efabcd cedba gadfec cb
+        ///aecbfdg fbg gf bafeg dbefa fcge gcbea fcaegb dgceab fcbdga | gecf egdcabf bgf bfgea
+        ///fgeab ca afcebg bdacfeg cfaedg gcfdb baec bfadeg bafgc acf | gebdcfa ecba ca fadegcb
+        ///dbcfg [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day08Sample {
+            get {
+                return ResourceManager.GetString("Day08Sample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0197653456789987679545987978921245689901497654212455689767899878999979653246892123569876467899212346
+        ///9989542349899986578959976557890134599892398943201234678956789467989867932135789012398764345678923456
+        ///8679931298999765459898765445921247987689459865432345889345892399876546899013894123459976569799634577
+        ///6567895497998764345789543239895456797535967976545467891234989989865434598954993248969987678999545798
+        ///8456897986539975234568955398789967998212899597676578910395678979996423987895789356798698799997656789
+        ///73 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day09 {
+            get {
+                return ResourceManager.GetString("Day09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2199943210
+        ///3987894921
+        ///9856789892
+        ///8767896789
+        ///9899965678.
+        /// </summary>
+        internal static string Day09Sample {
+            get {
+                return ResourceManager.GetString("Day09Sample", resourceCulture);
             }
         }
         
@@ -524,351 +998,6 @@ namespace AdventOfCode.Aoc2021 {
         internal static string Day15Sample {
             get {
                 return ResourceManager.GetString("Day15Sample", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {&quot;depths&quot;:[199,
-        ///200,
-        ///208,
-        ///210,
-        ///200,
-        ///207,
-        ///240,
-        ///269,
-        ///260,
-        ///263]}.
-        /// </summary>
-        internal static string Day1Sample {
-            get {
-                return ResourceManager.GetString("Day1Sample", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///&quot;moves&quot;:[
-        ///&quot;forward 3&quot;,
-        ///&quot;down 9&quot;,
-        ///&quot;forward 6&quot;,
-        ///&quot;down 3&quot;,
-        ///&quot;forward 8&quot;,
-        ///&quot;down 3&quot;,
-        ///&quot;down 4&quot;,
-        ///&quot;forward 3&quot;,
-        ///&quot;forward 5&quot;,
-        ///&quot;up 7&quot;,
-        ///&quot;forward 1&quot;,
-        ///&quot;forward 1&quot;,
-        ///&quot;forward 5&quot;,
-        ///&quot;down 8&quot;,
-        ///&quot;down 5&quot;,
-        ///&quot;forward 3&quot;,
-        ///&quot;forward 2&quot;,
-        ///&quot;forward 4&quot;,
-        ///&quot;down 7&quot;,
-        ///&quot;up 2&quot;,
-        ///&quot;up 2&quot;,
-        ///&quot;down 5&quot;,
-        ///&quot;down 5&quot;,
-        ///&quot;down 8&quot;,
-        ///&quot;down 2&quot;,
-        ///&quot;down 4&quot;,
-        ///&quot;forward 8&quot;,
-        ///&quot;forward 8&quot;,
-        ///&quot;up 2&quot;,
-        ///&quot;down 2&quot;,
-        ///&quot;up 8&quot;,
-        ///&quot;up 4&quot;,
-        ///&quot;forward 7&quot;,
-        ///&quot;up 8&quot;,
-        ///&quot;down 6&quot;,
-        ///&quot;forward 9&quot;,
-        ///&quot;forward 6&quot;,
-        ///&quot;forward 5&quot;,
-        ///&quot;up 1&quot;,
-        ///&quot;forward 6&quot;,
-        ///&quot;forward 8&quot;,
-        ///&quot;down  [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Day2 {
-            get {
-                return ResourceManager.GetString("Day2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///   &quot;moves&quot;:[
-        ///      &quot;forward 5&quot;,
-        ///      &quot;down 5&quot;,
-        ///      &quot;forward 8&quot;,
-        ///      &quot;up 3&quot;,
-        ///      &quot;down 8&quot;,
-        ///      &quot;forward 2&quot;
-        ///   ]
-        ///}.
-        /// </summary>
-        internal static string Day2Sample {
-            get {
-                return ResourceManager.GetString("Day2Sample", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {&quot;data&quot;:[
-        ///&quot;010100010111&quot;,
-        ///&quot;100100100110&quot;,
-        ///&quot;100110111001&quot;,
-        ///&quot;011001011011&quot;,
-        ///&quot;010000110111&quot;,
-        ///&quot;000011101001&quot;,
-        ///&quot;011000011101&quot;,
-        ///&quot;101111011111&quot;,
-        ///&quot;011001011010&quot;,
-        ///&quot;111100001001&quot;,
-        ///&quot;111111000110&quot;,
-        ///&quot;100010100110&quot;,
-        ///&quot;011100100100&quot;,
-        ///&quot;011111010000&quot;,
-        ///&quot;111010001100&quot;,
-        ///&quot;010111001110&quot;,
-        ///&quot;100010100100&quot;,
-        ///&quot;101000010000&quot;,
-        ///&quot;011101110100&quot;,
-        ///&quot;100010011000&quot;,
-        ///&quot;001111110011&quot;,
-        ///&quot;111001100001&quot;,
-        ///&quot;010000011001&quot;,
-        ///&quot;000011101010&quot;,
-        ///&quot;100010101100&quot;,
-        ///&quot;111011100010&quot;,
-        ///&quot;110000100001&quot;,
-        ///&quot;101010110001&quot;,
-        ///&quot;111101110101&quot;,
-        ///&quot;0010100 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Day3 {
-            get {
-                return ResourceManager.GetString("Day3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {&quot;data&quot;:[&quot;00100&quot;,
-        ///&quot;11110&quot;,
-        ///&quot;10110&quot;,
-        ///&quot;10111&quot;,
-        ///&quot;10101&quot;,
-        ///&quot;01111&quot;,
-        ///&quot;00111&quot;,
-        ///&quot;11100&quot;,
-        ///&quot;10000&quot;,
-        ///&quot;11001&quot;,
-        ///&quot;00010&quot;,
-        ///&quot;01010&quot;]}.
-        /// </summary>
-        internal static string Day3Sample {
-            get {
-                return ResourceManager.GetString("Day3Sample", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 31,50,68,16,25,15,28,80,41,8,75,45,96,9,3,98,83,27,62,42,59,99,95,13,55,10,23,84,18,76,87,56,88,66,1,58,92,89,19,54,85,74,39,93,77,26,30,52,69,48,91,73,72,38,64,53,32,51,6,29,17,90,34,61,70,4,7,57,44,97,82,37,43,14,81,65,11,22,5,36,71,35,78,12,0,94,47,49,33,79,63,86,40,21,24,46,20,2,67,60
-        ///
-        ///95 91 54 75 45
-        ///46 94 39 44 85
-        ///31 43 24  2 70
-        ///90 58  4 30 77
-        ///13 26 38 52 34
-        ///
-        ///68 14 99 63 46
-        ///67 16 82 10  8
-        ///55 52 41 51  4
-        ///90 17 32 44 74
-        ///89 94 73 56 36
-        ///
-        /// 6 91  2 28 71
-        /// 7 88 37 21 36
-        ///95 32 84 57  8
-        ///13 79 8 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Day4 {
-            get {
-                return ResourceManager.GetString("Day4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1
-        ///
-        ///22 13 17 11  0
-        /// 8  2 23  4 24
-        ///21  9 14 16  7
-        /// 6 10  3 18  5
-        /// 1 12 20 15 19
-        ///
-        /// 3 15  0  2 22
-        /// 9 18 13 17  5
-        ///19  8  7 25 23
-        ///20 11 10 24  4
-        ///14 21 16 12  6
-        ///
-        ///14 21 17 24  4
-        ///10 16 15  9 19
-        ///18  8 23 26 20
-        ///22 11 13  6  5
-        /// 2  0 12  3  7.
-        /// </summary>
-        internal static string Day4Sample {
-            get {
-                return ResourceManager.GetString("Day4Sample", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 959,103 -&gt; 139,923
-        ///899,63 -&gt; 899,53
-        ///591,871 -&gt; 364,644
-        ///739,913 -&gt; 310,484
-        ///460,309 -&gt; 460,705
-        ///351,389 -&gt; 351,837
-        ///420,55 -&gt; 420,541
-        ///916,520 -&gt; 382,520
-        ///136,604 -&gt; 295,604
-        ///343,59 -&gt; 142,59
-        ///951,206 -&gt; 806,206
-        ///984,950 -&gt; 61,27
-        ///739,388 -&gt; 988,388
-        ///374,370 -&gt; 644,370
-        ///403,504 -&gt; 798,899
-        ///943,535 -&gt; 229,535
-        ///149,227 -&gt; 583,661
-        ///62,126 -&gt; 62,352
-        ///131,391 -&gt; 131,717
-        ///254,944 -&gt; 254,220
-        ///572,111 -&gt; 572,47
-        ///336,249 -&gt; 830,743
-        ///898,858 -&gt; 203,163
-        ///203,320 -&gt; 825,942
-        ///19,318 -&gt; 19,120
-        ///740,432 -&gt; 740,39
-        ///591,3 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Day5 {
-            get {
-                return ResourceManager.GetString("Day5", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 0,9 -&gt; 5,9
-        ///8,0 -&gt; 0,8
-        ///9,4 -&gt; 3,4
-        ///2,2 -&gt; 2,1
-        ///7,0 -&gt; 7,4
-        ///6,4 -&gt; 2,0
-        ///0,9 -&gt; 2,9
-        ///3,4 -&gt; 1,4
-        ///0,0 -&gt; 8,8
-        ///5,5 -&gt; 8,2.
-        /// </summary>
-        internal static string Day5Sample {
-            get {
-                return ResourceManager.GetString("Day5Sample", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 5,4,3,5,1,1,2,1,2,1,3,2,3,4,5,1,2,4,3,2,5,1,4,2,1,1,2,5,4,4,4,1,5,4,5,2,1,2,5,5,4,1,3,1,4,2,4,2,5,1,3,5,3,2,3,1,1,4,5,2,4,3,1,5,5,1,3,1,3,2,2,4,1,3,4,3,3,4,1,3,4,3,4,5,2,1,1,1,4,5,5,1,1,3,2,4,1,2,2,2,4,1,2,5,5,1,4,5,2,4,2,1,5,4,1,3,4,1,2,3,1,5,1,3,4,5,4,1,4,3,3,3,5,5,1,1,5,1,5,5,1,5,2,1,5,1,2,3,5,5,1,3,3,1,5,3,4,3,4,3,2,5,2,1,2,5,1,1,1,1,5,1,1,4,3,3,5,1,1,1,4,4,1,3,3,5,5,4,3,2,1,2,2,3,4,1,5,4,3,1,1,5,1,4,2,3,2,2,3,4,1,3,4,1,4,3,4,3,1,3,3,1,1,4,1,1,1,4,5,3,1,1,2,5,2,5,1,5,3,3,1,3,5,5,1,5,4,3,1,5,1,1,5,5,1,1, [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Day6 {
-            get {
-                return ResourceManager.GetString("Day6", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 3,4,3,1,2.
-        /// </summary>
-        internal static string Day6Sample {
-            get {
-                return ResourceManager.GetString("Day6Sample", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 1101,1,29,67,1102,0,1,65,1008,65,35,66,1005,66,28,1,67,65,20,4,0,1001,65,1,65,1106,0,8,99,35,67,101,99,105,32,110,39,101,115,116,32,112,97,115,32,117,110,101,32,105,110,116,99,111,100,101,32,112,114,111,103,114,97,109,10,20,1091,861,228,628,186,980,996,710,541,354,1611,69,1331,91,1220,447,523,38,1286,244,643,1069,566,70,155,1710,1266,120,302,72,232,387,1086,278,1122,605,1559,98,111,1816,795,543,1217,304,356,129,839,704,49,523,370,74,13,232,179,101,664,892,266,622,197,404,147,882,435,504,48,766,684,1362,136, [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Day7 {
-            get {
-                return ResourceManager.GetString("Day7", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 16,1,2,0,4,2,7,1,2,14.
-        /// </summary>
-        internal static string Day7Sample {
-            get {
-                return ResourceManager.GetString("Day7Sample", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to fdeba beagfd gbafe dagb dbf ecfad bd dgcaefb fbecgd abfecg | dgba dfb ecadf bdf
-        ///dgfc egdbaf afgcbe eafdbcg bcgad bdg fdbacg gd ecabd bafgc | gd gbd dg febgac
-        ///dfebc bceadf ebacf gdceb fd dfea cdgfba afbgec dfb fdaecbg | cgafbde efbagc faed gecdb
-        ///dbaef fabgd fcaedb cgadf aefbgd cabefg gfb bceagdf bg ebdg | gdbfae geafdbc bafgdce dbgfa
-        ///aebgd adg dg dgcabef facedg cfaebd dfbega begca bfgd dbafe | abdecf eafbd fdgb ebdfgca
-        ///bae febac abcgf eabfgd cbagfd gefcba abedfcg efcda eb becg | fcgab gafbed aedcfbg eb        /// [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Day8 {
-            get {
-                return ResourceManager.GetString("Day8", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe
-        ///edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec | fcgedb cgb dgebacf gc
-        ///fgaebd cg bdaec gdafb agbcfd gdcbef bgcad gfac gcb cdgabef | cg cg fdcagb cbg
-        ///fbegcd cbd adcefb dageb afcb bc aefdc ecdab fgdeca fcdbega | efabcd cedba gadfec cb
-        ///aecbfdg fbg gf bafeg dbefa fcge gcbea fcaegb dgceab fcbdga | gecf egdcabf bgf bfgea
-        ///fgeab ca afcebg bdacfeg cfaedg gcfdb baec bfadeg bafgc acf | gebdcfa ecba ca fadegcb
-        ///dbcfg [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Day8Sample {
-            get {
-                return ResourceManager.GetString("Day8Sample", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 0197653456789987679545987978921245689901497654212455689767899878999979653246892123569876467899212346
-        ///9989542349899986578959976557890134599892398943201234678956789467989867932135789012398764345678923456
-        ///8679931298999765459898765445921247987689459865432345889345892399876546899013894123459976569799634577
-        ///6567895497998764345789543239895456797535967976545467891234989989865434598954993248969987678999545798
-        ///8456897986539975234568955398789967998212899597676578910395678979996423987895789356798698799997656789
-        ///73 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Day9 {
-            get {
-                return ResourceManager.GetString("Day9", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 2199943210
-        ///3987894921
-        ///9856789892
-        ///8767896789
-        ///9899965678.
-        /// </summary>
-        internal static string Day9Sample {
-            get {
-                return ResourceManager.GetString("Day9Sample", resourceCulture);
             }
         }
     }

@@ -23,7 +23,7 @@ public class Day_02
     public void Day_2_Sample()
     {
         // Arrange
-        var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day2Sample);
+        var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day02Sample);
 
         // Act
         var finalPosition = GetPosition(directions.Moves);
@@ -41,7 +41,7 @@ public class Day_02
     public void Day_2_Exercise()
     {
         // Arrange
-        var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day2);
+        var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day02);
 
         // Act
         var finalPosition = GetPosition(directions.Moves);
@@ -81,7 +81,7 @@ public class Day_02
     [Test]
     public void Day_2b_Sample()
     {
-        var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day2Sample);
+        var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day02Sample);
         var finalPosition = GetPositionV2(directions.Moves);
         Assert.AreEqual(new Position(15, 60), finalPosition);
         Assert.AreEqual(900, finalPosition.Horizontal * finalPosition.Depth);
@@ -91,7 +91,7 @@ public class Day_02
     [Test]
     public void Day_2b_Exercise()
     {
-        var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day2);
+        var directions = JsonSerializer.Deserialize<Directions>(Aoc2021Data.Day02);
         var finalPosition = GetPositionV2(directions.Moves);
         Assert.AreEqual(2063, finalPosition.Horizontal);
         Assert.AreEqual(892056, finalPosition.Depth);

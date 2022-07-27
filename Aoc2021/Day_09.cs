@@ -17,7 +17,7 @@ public class Day_09
     public void Should_load_sample_data()
     {
         // Arrange
-        string? inputData = Aoc2021Data.Day9Sample;
+        string? inputData = Aoc2021Data.Day09Sample;
 
         CaveSpot[,] caveGrid = CaveGridLoader.Load(inputData);
 
@@ -33,7 +33,7 @@ public class Day_09
     public void When_Sample_Data_Risk_Level_Should_Be_15()
     {
         // Arrange
-        string? inputData = Aoc2021Data.Day9Sample;
+        string? inputData = Aoc2021Data.Day09Sample;
         CaveSpot[,] caveGrid = CaveGridLoader.Load(inputData);
 
         // Act
@@ -48,7 +48,7 @@ public class Day_09
     public void When_Real_Data_Risk_Level_Should_Be_585()
     {
         // Arrange
-        string? inputData = Aoc2021Data.Day9;
+        string? inputData = Aoc2021Data.Day09;
         CaveSpot[,] caveGrid = CaveGridLoader.Load(inputData);
 
         // Act
@@ -63,7 +63,7 @@ public class Day_09
     public void When_Sample_Data_Three_Largest_Basins_Multiplied_Should_Be_1134()
     {
         // Arrange
-        string? inputData = Aoc2021Data.Day9Sample;
+        string? inputData = Aoc2021Data.Day09Sample;
         CaveSpot[,] caveGrid = CaveGridLoader.Load(inputData);
 
         // Act
@@ -78,7 +78,7 @@ public class Day_09
     public void When_Sample_Data_Three_Largest_Basins_Multiplied_Should_Be_827904()
     {
         // Arrange
-        string? inputData = Aoc2021Data.Day9;
+        string? inputData = Aoc2021Data.Day09;
         CaveSpot[,] caveGrid = CaveGridLoader.Load(inputData);
 
         // Act

@@ -23,7 +23,7 @@ public class Day_04
     {
         // Arrange
         // Act
-        var bingoBoardsAndDrawNumbers = BingoDataLoader.Load(Aoc2021Data.Day4);
+        var bingoBoardsAndDrawNumbers = BingoDataLoader.Load(Aoc2021Data.Day04);
 
         TestContext.WriteLine(string.Join(",", bingoBoardsAndDrawNumbers.DrawNumbers));
         TestContext.WriteLine();
@@ -42,8 +42,8 @@ public class Day_04
     {
         get
         {
-            yield return new TestCaseData(Aoc2021Data.Day4Sample, 4512);
-            yield return new TestCaseData(Aoc2021Data.Day4, 49860);
+            yield return new TestCaseData(Aoc2021Data.Day04Sample, 4512);
+            yield return new TestCaseData(Aoc2021Data.Day04, 49860);
         }
     }
 
@@ -64,8 +64,8 @@ public class Day_04
     {
         get
         {
-            yield return new TestCaseData(Aoc2021Data.Day4Sample, 1924);
-            yield return new TestCaseData(Aoc2021Data.Day4, 24628);
+            yield return new TestCaseData(Aoc2021Data.Day04Sample, 1924);
+            yield return new TestCaseData(Aoc2021Data.Day04, 24628);
         }
     }
 
